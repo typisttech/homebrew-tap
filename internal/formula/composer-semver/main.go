@@ -30,6 +30,16 @@ class ComposerSemver < Formula
   version "{{ .Version }}"
   license "MIT"
 
+  livecheck do
+    url :stable
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "{{ .DarwinARM64URL }}"
