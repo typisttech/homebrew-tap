@@ -3,7 +3,7 @@
 class ComposerSemver < Formula
   desc "Static linked CLI wrapper for composer/semver"
   homepage "https://github.com/typisttech/composer-semver"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   livecheck do
@@ -18,23 +18,23 @@ class ComposerSemver < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.0/composer-semver_Darwin_arm64.tar.gz"
-      sha256 "f10c968e24d9183255f7be1cbfe3792723f61ef33f580966db13eb55103ba908"
+      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.1/composer-semver_Darwin_arm64.tar.gz"
+      sha256 "19d5f26daf3f87a842ca719acd425b5c8c39e9bb5eccd5613083416bf0cbb3fe"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.0/composer-semver_Darwin_amd64.tar.gz"
-      sha256 "41fa428bfd6328beee037a9e5679fd34f3651cba8e3127674af9d4efde22abd2"
+      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.1/composer-semver_Darwin_amd64.tar.gz"
+      sha256 "0a825735ac0ee56d409bd3dcb9e69a8ce6a7357816c6b2620cd05e9698c4ddce"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.0/composer-semver_Linux_arm64.tar.gz"
-      sha256 "6363ccfbb05c1ec9b3f807121c40f61d35a6ce2104154962cb5fdc5e33902e25"
+      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.1/composer-semver_Linux_arm64.tar.gz"
+      sha256 "6388125d051b961dc0967f9df329e803f3249b83045a1c165d561941f30de26b"
     end
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.0/composer-semver_Linux_amd64.tar.gz"
-      sha256 "698b925d56052ba4a2967e8e73ca095b190e7c6b3a89dd48a30d111e21b43f18"
+      url "https://github.com/typisttech/composer-semver/releases/download/v1.0.1/composer-semver_Linux_amd64.tar.gz"
+      sha256 "d84024614d6236707f73e04bf0512cbf1a32d418f066ccb110a539b47ae6c824"
     end
   end
 
@@ -44,6 +44,6 @@ class ComposerSemver < Formula
   end
 
   test do
-    assert_match "Composer SemVer v1.0.0", shell_output("#{bin}/composer-semver --version")
+    assert_match "Composer SemVer v1.0.1", shell_output("#{bin}/composer-semver --version")
   end
 end
