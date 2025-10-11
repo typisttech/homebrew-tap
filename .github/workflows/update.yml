@@ -19,14 +19,13 @@ defaults:
     shell: bash
 
 jobs:
-  jobs:
-    go-generate:
-      uses: typisttech/.github/.github/workflows/create-auto-merged-pull-request-go.yml@v2
-      permissions:
-        contents: write
-        pull-requests: write
-      with:
-        command: go generate ./...
-        branch: tastendruck/go-generate/${{ github.ref_name }}
-        labels: go-generate
-      secrets: inherit
+  go-generate:
+    uses: typisttech/.github/.github/workflows/create-auto-merged-pull-request-go.yml@v2
+    permissions:
+      contents: write
+      pull-requests: write
+    with:
+      command: go generate ./...
+      branch: tastendruck/go-generate/${{ github.ref_name }}
+      labels: go-generate
+    secrets: inherit
