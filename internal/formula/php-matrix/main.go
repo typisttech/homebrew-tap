@@ -68,7 +68,8 @@ class PhpMatrix < Formula
   end
 
   test do
-    assert_match /PHP Matrix\s+v{{ .Version }}/, shell_output("#{bin}/php-matrix --version")
+    regex = /PHP Matrix\s+v{{ .Version }}/
+    assert_match regex, shell_output("#{bin}/php-matrix --version")
   end
 end
 `
