@@ -3,7 +3,7 @@
 class PhpMatrix < Formula
   desc "List PHP versions that satisfy the required PHP constraint in composer.json"
   homepage "https://github.com/typisttech/php-matrix"
-  version "1.0.6"
+  version "1.0.7"
   license "MIT"
 
   livecheck do
@@ -18,23 +18,23 @@ class PhpMatrix < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.6/php-matrix_darwin_arm64.tar.gz"
-      sha256 "e8447f02707712b7f7a605902fe449c963ef8a860421be8b29f98a1e3eda2423"
+      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.7/php-matrix_darwin_arm64.tar.gz"
+      sha256 "92fa97641729380d2fd273ac047918fcbc2148bf3e424806b5da7cfb183ef920"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.6/php-matrix_darwin_amd64.tar.gz"
-      sha256 "e8b893e9beff8ad42a2aab7573cc07890ac0b04f67f6400845ec61f5d0a607da"
+      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.7/php-matrix_darwin_amd64.tar.gz"
+      sha256 "dc8fa50dd48c193a4a050904b4a01db7b973ed1154633a4d33ba1be683cda39f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.6/php-matrix_linux_arm64.tar.gz"
-      sha256 "3b145d3475889521ee44e9cdb98374eef336683273864d16960cbb2ef0114bbf"
+      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.7/php-matrix_linux_arm64.tar.gz"
+      sha256 "a8b0bf44e5efaf81f339f68717c9c43a4c439a54b4196953d6fcb60b6275f568"
     end
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.6/php-matrix_linux_amd64.tar.gz"
-      sha256 "a5043161bdbce5764d51c09d4f6c62d152b7060cd32587113f937ba5d08e281e"
+      url "https://github.com/typisttech/php-matrix/releases/download/v1.0.7/php-matrix_linux_amd64.tar.gz"
+      sha256 "1b99c9cfcf36ea459dae0102c59b4c4f5948ff6d4ee3e86d3f3af616b672c68d"
     end
   end
 
@@ -44,7 +44,7 @@ class PhpMatrix < Formula
   end
 
   test do
-    regex = /PHP Matrix\s+v1.0.6/
+    regex = /PHP Matrix\s+v1.0.7/
     assert_match regex, shell_output("#{bin}/php-matrix --version")
   end
 end
