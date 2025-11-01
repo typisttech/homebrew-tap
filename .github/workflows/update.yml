@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  update-data:
+  go-generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
