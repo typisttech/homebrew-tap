@@ -25,6 +25,8 @@ jobs:
           go-version-file: 'go.mod'
 
       - run: go generate ./...
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - uses: typisttech/.github/.github/actions/create-auto-merged-pull-request@v3
         with:
