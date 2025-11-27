@@ -1,3 +1,2 @@
 config-variables:
-  - BREW_COMMIT_APP_ID222222 # https://github.com/Homebrew/brew/blob/123bf791ec1c167f7a3bbec50a438ba50f97d478/.github/actionlint.yaml#L7-L8
-  - TASTENDRUCK_APP_ID22222222 # TODO
+  - TASTENDRUCK_APP_ID
