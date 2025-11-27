@@ -16,12 +16,11 @@ jobs:
   actionlint:
     runs-on: ubuntu-latest
     steps:
-      # TODO: Find a better way to install actionlint, shellcheck and/or homebrew.
-      - run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      - run: brew install actionlint shellcheck
-
       - uses: actions/checkout@v6
         with:
           sparse-checkout: .github
 
-      - run: actionlint
+      - name: Check workflow files
+        uses: docker://rhysd/actionlint:latest
+        with:
+          args: -color
