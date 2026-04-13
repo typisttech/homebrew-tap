@@ -1,16 +1,9 @@
 # TypistTech Tap
 
-## How do I install these formulae?
+## Installation
 
-`brew install typisttech/tap/<formula>`
-
-Or `brew tap typisttech/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "typisttech/tap"
-brew "<formula>"
+```bash
+brew install typisttech/tap/<formula>
 ```
 
 ## Available formulae
@@ -21,6 +14,9 @@ brew "<formula>"
 
 - [php-matrix](https://github.com/typisttech/php-matrix)  
   List PHP versions that satisfy the required PHP constraint in `composer.json`.
+
+- [wpry](https://github.com/typisttech/wpry)  
+  Parse WordPress plugin and theme headers.
 
 ## Documentation
 
